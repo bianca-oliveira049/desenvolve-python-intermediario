@@ -1,0 +1,37 @@
+# ⚔️ Aventura no Labirinto
+
+**Aventura no Labirinto** é um jogo interativo baseado em texto executado inteiramente via terminal (CLI). O jogador deve explorar um labirinto gerado dinamicamente a partir de arquivos externos, coletar cristais para somar pontos e encontrar a saída antes que seus movimentos se esgotem. 
+
+O projeto conta também com um algoritmo recursivo que encontra a rota perfeita e resolve o labirinto sozinho na tela.
+
+---
+
+## 🛠️ Tecnologias e Recursos Utilizados
+
+Este projeto foi desenvolvido como o Trabalho Prático I do Módulo 1 (Python Intermediário) e exercita os seguintes conceitos:
+* **Programação Modular:** Código dividido em pacotes e módulos reutilizáveis (`labirinto.py`, `jogador.py`, `utils.py`).
+* **Recursividade:** Algoritmo de busca por retrocesso para resolução automática e animações de vitória recursivas.
+* **Match-Case:** Estrutura estruturada de controle de fluxo para o menu principal.
+* **Interface de Linha de Comando (CLI):** Customização total da execução usando argumentos e opções via `argparse`.
+* **Ambiente Virtual (venv):** Isolamento de dependências externas.
+* **Bibliotecas Externas:** * `rich`: Para estilização, cores e tabelas no terminal.
+    * `pynput`: Para captura em tempo real (assíncrona/síncrona) das teclas do jogador sem necessidade de apertar Enter.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+aventura_no_labirinto/ 
+├── aventura_pkg/ 
+│   ├── __init__.py 
+│   ├── labirinto.py 
+│   ├── jogador.py 
+│   └── utils.py 
+├── venv/                   # Ambiente virtual (omitido no .gitignore)
+├── mapa_facil.txt          # Layout do labirinto fácil
+├── mapa_dificil.txt        # Layout do labirinto difícil
+├── main.py                 # Ponto de entrada do jogo (CLI)
+├── requirements.txt        # Dependências do projeto
+├── aventura_pkg.html       # Documentação exportada em HTML
+└── README.md               # Manual do projeto
